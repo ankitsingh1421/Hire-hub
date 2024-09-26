@@ -18,6 +18,7 @@ import {
 
 import { getCompanies } from "@/api/apiCompanies";
 import { getJobs } from "@/api/apiJobs";
+import ChatBot from "@/components/ChatBot";
 
 const JobListing = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -159,6 +160,7 @@ const JobListing = () => {
           )}
         </div>
       )}
+      <ChatBot/>
     </div>
   );
 };

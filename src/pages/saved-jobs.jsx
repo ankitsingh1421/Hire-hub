@@ -1,4 +1,5 @@
 import { getSavedJobs } from "@/api/apiJobs";
+import ChatBot from "@/components/ChatBot";
 import JobCard from "@/components/job-card";
 import useFetch from "@/hooks/use-fetch";
 import { useUser } from "@clerk/clerk-react";
@@ -49,6 +50,7 @@ const SavedJobs = () => {
           )}
         </div>
       )}
+      <ChatBot/>
     </div>
   );
 };

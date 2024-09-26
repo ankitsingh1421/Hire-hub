@@ -9,6 +9,7 @@ import {
 } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
 import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
+import ThemeToggle from "./ThemeToggle"; // Import ThemeToggle component
 
 const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -36,7 +37,10 @@ const Header = () => {
           <img src="/logo-1.png" className="h-20" alt="Hirrd Logo" />
         </Link>
 
-        <div className="flex gap-8">
+        <div className="flex gap-8 items-center">
+          {/* Theme Toggle Button */}
+          <ThemeToggle />
+
           <SignedOut>
             <Button variant="outline" onClick={() => setShowSignIn(true)}>
               Login

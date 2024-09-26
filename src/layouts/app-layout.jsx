@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
@@ -10,7 +10,7 @@ const AppLayout = () => {
         <Outlet />
       </main>
       <div className="p-10 text-center bg-gray-800 mt-10">
-        Made with 💗 by Ankit Singh 
+        Made with 💗 by <Link to="https://github.com/ankitsingh1421">Ankit Singh </Link>
       </div>
     </div>
   );

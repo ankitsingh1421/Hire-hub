@@ -64,6 +64,19 @@
   padding-left: 25px;
   color: white;
 }
+@keyframes rotate-on-scroll {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotate-3d {
+  animation: rotate-on-scroll 1s ease-in-out;
+  transform-style: preserve-3d;
+}
 
 @layer base {
   * {
@@ -82,3 +95,29 @@
     @apply gradient text-transparent bg-clip-text;
   }
 }
+.animate-from-bottom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.transition-opacity {
+  opacity: 0;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.transition-opacity,
+.opacity-0 {
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.animate-from-bottom {
+  transform: translateY(0);
+}
+
+.transition-opacity {
+  transform: translateY(50px);
+}
+

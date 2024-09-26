@@ -12,6 +12,8 @@ import JobListing from "./pages/jobListing";
 import MyJobs from "./pages/my-jobs";
 import SavedJobs from "./pages/saved-jobs";
 import JobPage from "./pages/job";
+import Learn from "./pages/Learn";
+import { Verified } from "lucide-react";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <LandingPage />,
+      },
+      {
+        path: "/verify",
+        element: <Verified />,
       },
       {
         path: "/onboarding",
@@ -67,6 +73,12 @@ const router = createBrowserRouter([
           <ProtectedRoute>
             <JobPage />
           </ProtectedRoute>
+        ),
+      },
+      {
+        path:"/learn/:id",
+        element: (
+            <Learn />
         ),
       },
     ],
